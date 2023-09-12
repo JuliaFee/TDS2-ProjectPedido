@@ -5,3 +5,32 @@
 .hidden{
     display: none !important;
 }
+#main-container{
+    display: flex;
+}
+#info-div{
+    margin-left: 450px;
+    background-color: rgb(222, 222, 222);
+    padding: 30px;
+    border-radius: 10px;
+    max-height: 150px;
+}
+#card-div{
+    margin-left: 20px;
+    background-color: rgb(222, 222, 222);
+    padding: 30px;
+    border-radius: 10px;
+}
+button{
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+}
+#error-msg{
+    color: red;
+}
+#success-msg{
+    color: green;
+}

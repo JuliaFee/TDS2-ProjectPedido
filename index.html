@@ -9,20 +9,22 @@
 <body>
 
     <div id="main-container">
+        <div id="info-div">
         <h2 id="main-title">Cadastro de Pedidos</h2>
         <input id="client-input" placeholder="Cliente">
-        <input id="table-input" placeholder="Mesa">
+        <input id="table-input" type="number" placeholder="Mesa">
         <input id="desc-input" placeholder="Descrição">
-        <p id="error-msg" class="hidden"></p>
-        <p id="success-msg" class="hidden"></p>
         <button id="deploy-btn" onclick="createPedido()">Cadastrar</button>
         <buttton id="edit-btn" onclick="editPedido()" class="hidden">Editar</buttton>
-    </div>
+        <p id="error-msg" class="hidden"></p>
+        <p id="success-msg" class="hidden"></p>
+</div>
     <div id="sub-container">
         <div id="card-div">
 
         </div>
     </div>
+</div>
     <script src="assets/js/scripts.index.js"></script>
 </body>
 </html>

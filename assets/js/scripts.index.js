@@ -91,7 +91,7 @@ function sendSuccessMsg(msg) {
   }
   function renderPedido(){
     const pedidos = pedidoList.listarPedidos();
-    const elementoPedido = document.getElementById("sub-container"); 
+    const elementoPedido = document.getElementById("card-div"); 
     let content = '';
     elementoPedido.innerHTML = "";
     pedidos.forEach((pedido) => {
@@ -119,6 +119,10 @@ function updatePedido(id){
      document.getElementById("desc-input").value = order.desc;
 
      aux = id;
+
+     document.getElementById("edit-btn").classList.remove("hidden");
+     document.getElementById("edit-btn").classList.add("hidden");
+
 }
 function editPedido(){
 
@@ -127,7 +131,7 @@ function editPedido(){
     const desc = document.getElementById("desc-input").value;
 
 
-    pedidoList.atualizarEquipe(aux, client, table, desc);
+    pedidoList.updatePedido(aux, client, table, desc);
 
     listarPedidos();
 
