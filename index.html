@@ -13,7 +13,10 @@
         <input id="client-input" placeholder="Cliente">
         <input id="table-input" placeholder="Mesa">
         <input id="desc-input" placeholder="Descrição">
-        <button id="deploy-btn">Cadastrar</button>
+        <p id="error-msg" class="hidden"></p>
+        <p id="success-msg" class="hidden"></p>
+        <button id="deploy-btn" onclick="createPedido()">Cadastrar</button>
+        <buttton id="edit-btn" onclick="editPedido()" class="hidden">Editar</buttton>
     </div>
     <div id="sub-container">
         <div id="card-div">
