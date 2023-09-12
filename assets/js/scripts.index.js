@@ -33,6 +33,8 @@ class PedidoList{
         }
         updatePedido(id, client, table, desc){
             const pedido = this.getPedidoById(id);
+
+            console.log(pedido);
             pedido.client = client;
             pedido.table = table;
             pedido.desc = desc;
@@ -121,7 +123,7 @@ function updatePedido(id){
      aux = id;
 
      document.getElementById("edit-btn").classList.remove("hidden");
-     document.getElementById("edit-btn").classList.add("hidden");
+     document.getElementById("deploy-btn").classList.add("hidden");
 
 }
 function editPedido(){
@@ -133,7 +135,7 @@ function editPedido(){
 
     pedidoList.updatePedido(aux, client, table, desc);
 
-    listarPedidos();
+    renderPedido();
 
     document.getElementById("deploy-btn").classList.remove("hidden");
      document.getElementById("edit-btn").classList.add("hidden");
@@ -144,7 +146,7 @@ function editPedido(){
 function deletePedido(id){
     pedidoList.deletePedido(id);
 
-    listarPedidos();
+    renderPedido();
 
     document.getElementById("card-div").classList.add("hidden");
 }
